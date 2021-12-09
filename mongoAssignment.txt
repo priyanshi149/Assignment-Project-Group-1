@@ -1,0 +1,13 @@
+use sample_restaurants
+
+3. db.restaurants.find({})
+4. db.restaurants.find({ }, {restaurant_id: 1, name: 1, borough: 1, cuisine: 1})
+5. db.restaurants.find({ }, {restaurant_id: 1, name: 1, borough: 1, cuisine: 1, _id: 0})
+6. db.restaurants.find({borough: 'Bronx' })
+7. db.restaurants.find({borough: 'Bronx' }).limit(5)
+8. db.restaurants.find({borough: 'Bronx' }).skip(5).limit(5)
+9. db.restaurants.find({"grades.score": {$gt: 80, $lt: 100}},{name: 1, "grades.score": 1, _id: 0})
+10.db.restaurants.find({name: /^Wil/ },{name: 1, restaurant_id: 1, cuisine: 1, borough: 1, _id: 0})
+
+
+
